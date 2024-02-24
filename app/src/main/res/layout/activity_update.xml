@@ -9,117 +9,118 @@
     android:layout_gravity="center_vertical"
     tools:context=".UpdateActivity"
     android:background="@drawable/editupdate">
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/BackUpdate"
+        android:background="@drawable/baseline_arrow_back_24"
+        android:backgroundTint="@color/darkbrown"
+        android:textSize="18sp"
+        android:text=""
+        android:layout_marginTop="5dp"
+        android:layout_gravity="start"
+        android:layout_marginEnd="10dp"/>
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="110dp"
+        android:gravity="center_horizontal">
 
-        <LinearLayout
+        <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="150dp"
-            android:gravity="center_horizontal"
-            android:padding="20dp">
+            android:layout_height="50dp"
+            android:id="@+id/UpdateID"
+            android:hint="ID Karyawan"
+            android:background="@drawable/darkbrown_border"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/charcoal"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="start|center_vertical"
+            android:padding="16dp"/>
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/UpdateNama"
+            android:hint="Nama Lengkap"
+            android:background="@drawable/darkbrown_border"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/charcoal"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="start|center_vertical"
+            android:padding="16dp"/>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:id="@+id/UpdateID"
-                android:hint="ID Karyawan"
-                android:background="@drawable/darkbrown_border"
-                android:backgroundTint="@color/white"
-                android:textColor="@color/charcoal"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="start|center_vertical"
-                android:padding="16dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/UpdateJabatan"
+            android:hint="Jabatan"
+            android:background="@drawable/darkbrown_border"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/charcoal"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="start|center_vertical"
+            android:padding="16dp"/>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:id="@+id/UpdateNama"
-                android:hint="Nama Lengkap"
-                android:background="@drawable/darkbrown_border"
-                android:backgroundTint="@color/white"
-                android:textColor="@color/charcoal"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="start|center_vertical"
-                android:padding="16dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/UpdateTanggal"
+            android:hint="Tanggal Lahir"
+            android:background="@drawable/darkbrown_border"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/charcoal"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="start|center_vertical"
+            android:padding="16dp"/>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:id="@+id/UpdateJabatan"
-                android:hint="Jabatan"
-                android:background="@drawable/darkbrown_border"
-                android:backgroundTint="@color/white"
-                android:textColor="@color/charcoal"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="start|center_vertical"
-                android:padding="16dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/UpdateKelamin"
+            android:hint="Jenis Kelamin"
+            android:background="@drawable/darkbrown_border"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/charcoal"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="start|center_vertical"
+            android:padding="16dp"/>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:id="@+id/UpdateTanggal"
-                android:hint="Tanggal Lahir"
-                android:background="@drawable/darkbrown_border"
-                android:backgroundTint="@color/white"
-                android:textColor="@color/charcoal"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="start|center_vertical"
-                android:padding="16dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/UpdateNope"
+            android:hint="Nope"
+            android:background="@drawable/darkbrown_border"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/charcoal"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="start|center_vertical"
+            android:padding="16dp"/>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:id="@+id/UpdateKelamin"
-                android:hint="Jenis Kelamin"
-                android:background="@drawable/darkbrown_border"
-                android:backgroundTint="@color/white"
-                android:textColor="@color/charcoal"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="start|center_vertical"
-                android:padding="16dp"/>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:id="@+id/UpdateNope"
-                android:hint="Nope"
-                android:background="@drawable/darkbrown_border"
-                android:backgroundTint="@color/white"
-                android:textColor="@color/charcoal"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="start|center_vertical"
-                android:padding="16dp"/>
-
-
-
-            <Button
-                android:layout_width="150dp"
-                android:layout_height="60dp"
-                android:id="@+id/UpdateSaveBtn"
-                android:backgroundTint="@color/darkbrown"
-                android:textSize="18sp"
-                android:text="UPDATE"
-                android:layout_marginTop="5dp"
-                android:layout_gravity="center"
-                android:layout_marginEnd="10dp"/>
-        </LinearLayout>
-    </ScrollView>
-
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:id="@+id/UpdateSaveBtn"
+            android:backgroundTint="@color/darkbrown"
+            android:textSize="18sp"
+            android:text="UPDATE"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"/>
+    </LinearLayout>
 </LinearLayout>

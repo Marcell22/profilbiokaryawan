@@ -29,6 +29,12 @@ class UpdateActivity : AppCompatActivity() {
 
             updateData(idkaryawan, namalengkap, jabatan, tanggal, kelamin, nope)
         }
+
+        binding.BackUpdate.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
     private fun updateData(IDkaryawan: String, namalengkap: String, jabatan: String, tanggal: String, kelamin: String, nope: String){
         databaseReference = FirebaseDatabase.getInstance().getReference("Data Karyawan")

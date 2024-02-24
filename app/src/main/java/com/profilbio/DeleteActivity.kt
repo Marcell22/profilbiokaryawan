@@ -27,7 +27,15 @@ class DeleteActivity : AppCompatActivity() {
                 Toast.makeText(this, "Please enter EPF number", Toast.LENGTH_SHORT).show()
             }
         }
+
+        binding.BackDelete.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
     }
+
 
     private fun deleteData(idkaryawan: String){
         databaseReference = FirebaseDatabase.getInstance().getReference("Data Karyawan")
