@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchIDKaryawan"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/darkbrownwhite_border"
+        android:drawableLeft="@drawable/baseline_search_24"
+        android:drawablePadding="8dp"
+        android:hint="Enter EPF Number"
+        android:textSize="20sp"
+        android:textColor="@color/charcoal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <Button
+        android:id="@+id/searchbtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/baseline_search_24"
+        android:padding="12dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/uploadbtnsearch"
+        app:layout_constraintRight_toLeftOf="@id/uploadbtnsearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchIDKaryawan" />
+
+    <Button
+        android:id="@+id/uploadbtnsearch"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/baseline_person_add_24"
+        android:padding="12dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/updatebtnsearch"
+        app:layout_constraintLeft_toRightOf="@id/searchbtn"
+        app:layout_constraintRight_toLeftOf="@id/updatebtnsearch"
+        app:layout_constraintTop_toBottomOf="@id/searchIDKaryawan" />
+
+    <Button
+        android:id="@+id/updatebtnsearch"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/baseline_edit_document_24"
+        android:padding="12dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/deletebtnsearch"
+        app:layout_constraintLeft_toLeftOf="@id/uploadbtnsearch"
+        app:layout_constraintRight_toLeftOf="@id/deletebtnsearch"
+        app:layout_constraintTop_toBottomOf="@id/searchIDKaryawan" />
+
+    <Button
+        android:id="@+id/deletebtnsearch"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/baseline_delete_24"
+        android:padding="12dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/updatebtnsearch"
+        app:layout_constraintTop_toBottomOf="@id/searchIDKaryawan" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="140dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="@drawable/darkbrown_border"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchbtn">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    android:orientation="horizontal"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_id"
+                        android:layout_weight="1"
+                        android:text="ID Karyawan"
+                        android:textStyle="bold"
+                        android:textColor="@color/darkorange"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/read_id"
+                        android:text=""
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/charcoal"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:alpha="0.5"
+                    android:background="@color/darkorange"/>
+                <!-- SEPARATOR -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    android:orientation="horizontal"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_nama"
+                        android:layout_weight="1"
+                        android:text="NAMA LENGKAP"
+                        android:textStyle="bold"
+                        android:textColor="@color/darkorange"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/read_nama"
+                        android:text=""
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/charcoal"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:alpha="0.5"
+                    android:background="@color/darkorange"/>
+                <!-- SEPARATOR -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_jabatan"
+                        android:layout_weight="1"
+                        android:text="JABATAN"
+                        android:textStyle="bold"
+                        android:textColor="@color/darkorange"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/read_jabatan"
+                        android:text=""
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/charcoal"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:alpha="0.5"
+                    android:background="@color/darkorange"/>
+                <!-- SEPARATOR -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_tanggal"
+                        android:layout_weight="1"
+                        android:text="TANGGAL LAHIR"
+                        android:textStyle="bold"
+                        android:textColor="@color/darkorange"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/read_tanggal"
+                        android:text=""
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/charcoal"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:alpha="0.5"
+                    android:background="@color/darkorange"/>
+                <!-- SEPARATOR -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_kelamin"
+                        android:layout_weight="1"
+                        android:text="JENIS KELAMIN"
+                        android:textStyle="bold"
+                        android:textColor="@color/darkorange"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/read_kelamin"
+                        android:text=""
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/charcoal"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:alpha="0.5"
+                    android:background="@color/darkorange"/>
+                <!-- SEPARATOR -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_nope"
+                        android:layout_weight="1"
+                        android:text="NOMOR TELEPON"
+                        android:textStyle="bold"
+                        android:textColor="@color/darkorange"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/read_nope"
+                        android:text=""
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/charcoal"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

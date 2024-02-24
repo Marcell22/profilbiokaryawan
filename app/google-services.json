@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "718978253625",
+    "project_id": "profilbiokaryawan",
+    "storage_bucket": "profilbiokaryawan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718978253625:android:25f29d3e1012df88b25ee8",
+        "android_client_info": {
+          "package_name": "com.example.employeeprofile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsyw26lZwvieFuexHEqdi6K7stb7GAMVM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718978253625:android:852e907330ddccb8b25ee8",
+        "android_client_info": {
+          "package_name": "com.profilbio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsyw26lZwvieFuexHEqdi6K7stb7GAMVM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
